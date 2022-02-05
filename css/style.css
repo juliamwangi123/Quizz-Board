@@ -1,0 +1,77 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    
+    
+    height: 100vh;
+    
+}
+
+#start-page{
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin: 10px 10px;
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 5%;
+    overflow-y:fixed;
+    background-image: url(/images/img.webp);
+   
+}
+
+p span {
+   
+    font-size: 90px;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+.logo p{
+    font-size: 33px;
+    margin-top: 200px;
+    color:black;
+    font-weight: 700;
+}
+
+
+sub{
+    margin-left: 10px;
+}
+
+sup{
+    font-size: 32px;
+}
+
+
+#btn-start a{
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+#btn-start button{
+    color:black;
+    text-decoration: none;
+    padding: 25px;
+    margin-left: 50px;
+    border-radius: 10%;
+    width: 50px;
+    text-align: center;
+
+}
+
+.wishes p{
+    font-style: oblique;
+
+}
