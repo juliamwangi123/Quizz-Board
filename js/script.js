@@ -17,6 +17,8 @@ const btnQue5=document.querySelector(".buttonsNext5");
 
 
 let score = 0;// initialize score to 0
+let result = document.getElementById("result");//displays results
+
 
 // when the start buttonlet score = 0;// initialize score to 0 is clicked move to the instruction page
 
@@ -114,9 +116,9 @@ total();
 
 
 function total(){
-    const result = document.getElementById("result");//displays results
-    if (score< 2){
-        console.log('hey')
+    if (score<=2){
+        result.innerText = score
+       console.log(result);
     }
         
 
