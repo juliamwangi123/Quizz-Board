@@ -242,3 +242,15 @@
         cursor: pointer;
         
     }
+/*page  showing score */
+    .score_page{
+            display: none;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%); 
+            background-color: whitesmoke;
+            width:600px;
+            height: 200px;
+
+    }
