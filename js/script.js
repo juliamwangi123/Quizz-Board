@@ -1,5 +1,6 @@
 
 
+
 let score = 0;
 
 
@@ -22,8 +23,7 @@ if(answer == "C"){ score ++};
 
 if(answer2 == "A"){ score ++};
 if(answer3 == "B"){ score ++};
-
-if (answer4 == "A"  && answer4 == "D"){ console.log('het');};
+if(answer4 == "D"){score++};
 
 quiz.style.display ="none"; // to display the score set form display to none
 
