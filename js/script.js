@@ -16,9 +16,9 @@ const scorePage = document.querySelector(".scores");
 const btnQue5=document.querySelector(".buttonsNext5");
 
 
+let score = 0;// initialize score to 0
 
-
-// when the start button is clicked move to the instruction page
+// when the start buttonlet score = 0;// initialize score to 0 is clicked move to the instruction page
 
 startBtn.addEventListener("click", (event)=>{
     event.preventDefault();
@@ -83,52 +83,29 @@ btnQue4.addEventListener("click", (e)=>{
     e.preventDefault();
    
     fifthQue.classList.add("show2");
-    
 
 
 } )
-
-
 btnQue5.addEventListener("click", (e)=>{
-    e.preventDefault();
-   
-   
-    scorePage.classList.add("scoreShow");
+        e.preventDefault();
+        scorePage.classList.add("scoreShow");
 
 
-
-} )
-
-
-
-
-
-
-
-let score = 0;// initialize score to zero
-
-
-
-const quiz = document.getElementById("form1");
-
-
-let startQuiz = quiz.addEventListener("submit" , (e) =>{  
-  
-e.preventDefault();//prevent refresh of the page everytime the submit btn is clicked
-;
 
 
 let answer = document.quiz.question1.value;// geting the value of each correct answer
 let answer2= document.quiz.question2.value;
 let answer3= document.quiz.question3.value;
 let answer4 = document.quiz.question4.value;
+let answer5 = document.quiz.question5.value;
 
 
 if(answer == "C"){ score ++};
 
 if(answer2 == "A"){ score ++};
 if(answer3 == "B"){ score ++};
-if(answer4 == "D"){score++};
+if(answer4 == "C"){score++};
+if(answer5 =="C"){score++};
 
 quiz.style.display ="none"; // to display the score set form display to none
 
@@ -139,7 +116,7 @@ total();
 function total(){
     const result = document.getElementById("result");//displays results
     if (score< 2){
-        result.innerHTML ="hey you";
+        console.log('hey')
     }
         
 
