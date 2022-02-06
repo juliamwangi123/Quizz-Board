@@ -64,7 +64,7 @@
  }
 
  .instructions{
-     display: none ;/*come back later*/
+    /*come back later*/
      position: absolute;
      left:50%;
      top:50%;
@@ -74,6 +74,9 @@
      height: 200px;
      border-radius: 5px;
      border-bottom: 1px solid black;
+     opacity: 0;
+     pointer-events: none;
+     transform: translate(-50% -50%) scale(0.9);
  }
 
  .instructions h4{
@@ -145,7 +148,7 @@
     }
 /*styling the first question*/
     .quiz1{
-        display: none;
+        
         position: absolute;
         left:50%;
         top:50%;
@@ -153,7 +156,8 @@
         background-color: whitesmoke;
         width:600px;
         height: 200px;
-        
+        opacity: 0;
+        pointer-events: none;
 
     }
     .quiz1 .que1{
@@ -243,14 +247,51 @@
         
     }
 /*page  showing score */
-    .score_page{
-            display: none;
-            position: absolute;
-            left:50%;
-            top:50%;
-            transform:translate(-50%, -50%); 
-            background-color: whitesmoke;
-            width:600px;
-            height: 200px;
-
+    .scores{
+        
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%); 
+        background-color:white;
+        width:300px;
+        height: 200px;
+        display: flex;
+        flex-direction:column;
+        justify-content:space-between;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(  );
+           
+    }   
+    .showResults{
+        height: 40px;
+        width: 100%;
+        background-color: blue;
+        text-align: center;
+        
     }
+
+    .showResults p{
+        font-size:20px;
+        font-weight:500;
+        color: white;
+        
+    } 
+
+
+.restart_btn{
+    display: flex;
+    justify-content: space-around;
+    transition:all 0.2s ease;
+    
+
+}
+
+.restart_btn a{
+    text-decoration: none;
+    color: black;
+    background-color: brown;
+    padding: 5px;
+    
+}

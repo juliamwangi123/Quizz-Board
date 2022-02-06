@@ -1,12 +1,14 @@
 
+const startbtn = document.querySelector(".startbtn")
 
 
-let score = 0;
+let score = 0;// initialize score to zero
+
 
 
 const quiz = document.getElementById("form1");
-
 const result = document.getElementById("result");//displays results
+
 let startQuiz = quiz.addEventListener("submit" , (e) =>{  
   
 e.preventDefault();//prevent refresh of the page everytime the submit btn is clicked

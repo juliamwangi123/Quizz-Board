@@ -4,42 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div id="start-page">
-        <div class="logo">
-            <p>Quiz </p> 
-            
-        </div>
-
-        <div class="startbtn">
-            <a href="/quiz.html" class="btn-start"> START</a>
-
-        </div>
-
-   
-         <div class="instructions">
-             <h4>Read The Instructions Carefully </h4>
-         <div class="setInstructions">
-
-            <div class="info">1.There are only 5 Questions</div>
-            <div class="info">2. Your total score based on the number of correct answers</div>
-            <div class="info">3. You CANNOT exit once you start the quiz</div>
-            <div class="info"> 4. Once you SELECT  your  answer you cant RESELECT </div>
-
-         </div>
-         <div class="buttons">
-            <button class="extitbtn">EXIT</button>
-            <button class="continue">NEXT</button>
-
-        </div>
-            </div>  
-
-            <!--add restart and continiue btn-->
-            
+<body >
+   <!--landing page-->
+   <div id="start-page">
+    <div class="logo">
+        <p>Quiz </p> 
         
+    </div>
+
+    <div class="startbtn">
+        <a href="/quiz.html" class="btn-start"> START</a>
+
+    </div>
+
+
+     <div class="instructions">
+         <h4>Read The Instructions Carefully </h4>
+     <div class="setInstructions">
+
+        <div class="info">1.There are only 5 Questions</div>
+        <div class="info">2. Your total score based on the number of correct answers</div>
+        <div class="info">3. You CANNOT exit once you start the quiz</div>
+        <div class="info"> 4. Once you SELECT  your  answer you cant RESELECT </div>
+
+     </div>
+     <div class="buttons">
+        <button class="extitbtn">EXIT</button>
+        <button class="continue">NEXT</button>
+
+    </div>
+
+        
+    
+
+<!--form starts here-->
+
+
+   <form name="quiz" id="form1" >
+      
+
+       <!--same name  to allow user check one answer a-->
+<div class="quiz1">
+ <p class="que1">1. Inside which HTML element do we put the JavaScript?</p> 
+ 
+ <div class="questionList">
+        <div class="choices">
+
+    <p><input type="radio"name="question1"    value=" scripitng"> A.scripting  tag</p>
+    <p><input type="radio"  name="question1"    value="js">B. js tag</p>
+    <p><input type="radio"  name="question1"    value="C">C. script tag</p> 
+    <p><input type="radio"  name="question1"    value=" javascript"> D.javascript tag </p> 
+        </div>
+        <div class="footer">
+            <div class="total_question">
+                <span><p>1</p>of<p>5</p>Questions </span>
+            </div>
+            <div class="nextquestion">
+                <button>NEXT</button>
+            </div>
+        </div>
+    
+ </div>
+
+</div>
+
+
+<div class="quiz2">
+
+    2.What is javascript?
+    <p>  <input type="radio"name="question2"   value="A"> A.Scripting language </p>
+    <p><input type="radio"  name= "question2"  value="Markup language">B. Markup language</p>
+    <p><input type="radio"  name="question2 "  value="database language">C. Database</p> 
+    <p><input type="radio"  name="question2 "   value="styling language"> Dcascading styling language </p> 
+
+</div>
+  
+<div class="quiz3">
+
+    3.When was JS created?
+    <p>  <input type="radio"name="question3"     value="A"> A.2015</p>
+    <p><input type="radio"  name="question3"     value="B">B. 1995</p>
+    <p><input type="radio"  name="question3"      value="C">C. 2008</p> 
+    <p><input type="radio"  name="question3"      value="D">D.1965 </p> 
+
+
+</div>
+
+<div class="quiz4">
+
+    4.Select the most common web development language
+
+    <p> <input type="radio" name="question4"     value="A"> A.HTML</p>
+    <p><input type="radio"   name="question4"     value="B">B. SQL</p>
+    <p><input type="radio"   name="question4"      value="C">C. KOTLIN</p> 
+    <p><input type="radio"   name="question4"      value="D">D.JS </p> 
+
+    
+    <button type="submit"  id="btn"> Submit</button>
+</div>
 
 
 
@@ -48,6 +113,31 @@
 
 
 
-   <script src="js/script.js"></script>
+</form> 
+
+<div class="scores">
+    <div class="showResults">
+        <p id="result">your score is</p>
+
+    </div>
+    <div class="restart_btn">
+    <a href="/index.html" id="redo">RETAKE QUIZ</a>
+    <a href="/index.html" id="quit">QUIT QUIZ</a>
+    </div> 
+</div>
+
+  
+
+
+    
+
+ 
+
+
+
+
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>
