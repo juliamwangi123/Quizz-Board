@@ -1,7 +1,45 @@
+//getting keys to moke to the next container
+const startBtn = document.querySelector(".startbtn");
+const instructions = document.querySelector(".instructions")
+const exitButton = document.querySelector(".extitbtn");
+const continueBtn = document.querySelector(".continue");
+const firstQue =document.querySelector(".quiz1");
+// when the start button is clicked move to the instruction page
 
-const startbtn = document.querySelector(".startbtn")
+startBtn.addEventListener("click", (event)=>{
+    event.preventDefault();
+    instructions.classList.add("show"); // instructions show up 
+})
+
+//clicking the exit button takes to land page
 
 
+exitButton.addEventListener("click", (e)=>{
+
+    e.preventDefault();
+    instructions.classList.remove("show");
+
+});
+
+
+
+//if continue button is clicked takes one to the quiz
+continueBtn.addEventListener("click", (e)=>{
+
+    e.preventDefault();
+    firstQue.classList.add("show");
+})
+
+
+
+
+
+
+
+
+
+
+/*
 let score = 0;// initialize score to zero
 
 
@@ -44,3 +82,4 @@ function total(){
   
 };
 
+*/

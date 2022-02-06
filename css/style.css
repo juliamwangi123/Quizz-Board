@@ -15,12 +15,53 @@
      background-size: cover;
  }
 
+ 
+/*landing page starts here */
 
- .startbtn{
 
+
+
+.startbtn{
     position:absolute;
-    top:65%;
-    left:7%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    
+    
+
+
+}
+.instructions.show{
+     z-index: 5;
+     opacity: 1;
+     pointer-events: auto;
+     transform: translate(-50%,-50%) scale(1);
+ }
+
+
+
+.quiz1.show{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .startbtn .btn-start{
+
+    
     font-size: 25px;
     font-weight: 500;
     padding: 5px 20px;
@@ -34,21 +75,19 @@
     
  }
 
- .startbtn:hover{
-     background-color: transparent;
-     transition: 2s;
- }
+ 
 
 
- .startbtn  a{
+ .startbtn  button{
      color: white;
      text-decoration: none;
      font-size: 15px;
      background-color: transparent;
      border:none;
      font-weight: 500;
+     
  }
- .logo{
+/*.logo{
     position:absolute;
     top:45%;
     left:4%;
@@ -62,7 +101,7 @@
     text-decoration: none;
     text-align: center;
  }
-
+*/
  .instructions{
     /*come back later*/
      position: absolute;
@@ -76,7 +115,7 @@
      border-bottom: 1px solid black;
      opacity: 0;
      pointer-events: none;
-     transform: translate(-50% -50%) scale(0.9);
+     transform: translate(-50%,-50%) scale(0.9);
  }
 
  .instructions h4{
@@ -147,8 +186,8 @@
 
     }
 /*styling the first question*/
-    .quiz1{
-        
+    .quiz1
+    .quiz2 {
         position: absolute;
         left:50%;
         top:50%;
@@ -158,9 +197,12 @@
         height: 200px;
         opacity: 0;
         pointer-events: none;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%,-50%) scale(0.9);
 
     }
-    .quiz1 .que1{
+    .quiz1 .ask{
         position: relative;
         z-index:100;
         height: 50px;
@@ -173,19 +215,19 @@
 
 
     }
-    .questionList{
+    .choicesList{
         padding: 25px 30px;
         background-color: whitesmoke; 
         margin-top: 10px;
 
     }
-    .questionList .choices{
+    .choicesList .choices{
         padding:20px 0;
         display: block  ;
     }
 
 
-    .questionList .choices p{
+    .choicesList .choices p{
         background-color: aliceblue;
         border:1px solid #1161a3;
         border-radius: 5px;
@@ -199,14 +241,14 @@
         
     }
 
-  .questionList .choices p:hover{
+  .choicesList .choices p:hover{
     transition: 1s ease-out;
     background-color: lightskyblue;
 
 }
 
 
-    .questionList .choices p:last-child{
+    .choicesList .choices p:last-child{
         margin-bottom: 0;
     } 
 
@@ -220,7 +262,7 @@
 
     }
 
-   .questionList .footer span{
+   .choicesList .footer span{
         display: flex;
         user-select: none;
         font-size:14px;
@@ -228,19 +270,21 @@
         
     }
 
-    .questionList  .footer span p{
+    .choicesList  .footer span p{
         font-size :14px;
         font-weight: 500;
         padding: 0 5px;
     }
 
-    .questionList   .footer .nextquestion{
+     .nextquestion .buttons{
         height: 30px;
-        font-size:20px;
+        width: 60px;
+        padding: 5px;
+        font-size:15px;
         font-weight: 500;
-        padding: 0 5px;
+        text-align: center;
         background-color: lightskyblue;
-        color: white;
+        color: black;
         border:1px solid  lightskyblue;
         border-radius: 5px;
         cursor: pointer;
