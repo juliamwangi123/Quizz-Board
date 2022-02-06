@@ -1,9 +1,16 @@
 //getting keys to moke to the next container
-const startBtn = document.querySelector(".startbtn");
-const instructions = document.querySelector(".instructions")
-const exitButton = document.querySelector(".extitbtn");
-const continueBtn = document.querySelector(".continue");
-const firstQue =document.querySelector(".quiz1");
+const startBtn = document.querySelector(".startbtn");//start btn
+const instructions = document.querySelector(".instructions")//instruction page
+const exitButton = document.querySelector(".extitbtn");//exit button
+const continueBtn = document.querySelector(".continue");//conntiu button
+const firstQue =document.querySelector(".quiz1");//firt question
+const nextQue1Btn = document.querySelector(".buttonsNext1")//next button on question 1
+const secondQue =document.querySelector(".quiz2");// question 2
+const btnQue2 =document.querySelector(".buttonsNext2");
+const thirdQue =document.querySelector(".quiz3");
+
+
+
 // when the start button is clicked move to the instruction page
 
 startBtn.addEventListener("click", (event)=>{
@@ -27,14 +34,29 @@ exitButton.addEventListener("click", (e)=>{
 continueBtn.addEventListener("click", (e)=>{
 
     e.preventDefault();
-    firstQue.classList.add("show");
+    firstQue.classList.add("show2");
+   
+
 })
 
+//next button on question 1 takes you to questin 2
+
+nextQue1Btn.addEventListener("click", (e)=>{
+
+    e.preventDefault();
+   
+    secondQue.classList.add("active");
+   
+
+})
+btnQue2.addEventListener("click", (e)=>{
+    e.preventDefault();
+   
+    thirdQue.classList.add("pop");
 
 
 
-
-
+} )
 
 
 

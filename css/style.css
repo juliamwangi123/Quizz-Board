@@ -4,7 +4,7 @@
      padding:0;
 
  }
-
+ 
 
  body{
     
@@ -40,16 +40,27 @@
 
 
 
-.quiz1.show{
+.quiz1.show2{
         opacity: 1;
         pointer-events: auto;
         transform: translate(-50%,-50%) scale(1);
 }
 
+.quiz2.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+
+}
 
 
 
+.quiz3.pop{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
 
+}
 
 
 
@@ -146,7 +157,7 @@
    
  }
 
- .instructions .buttons{
+ .instructions .regButtons{
      height:40px;
      width: 600;
      border:1px solid transparent;
@@ -167,7 +178,7 @@
         margin: 0 5px;
         font-weight:500;
     }
-
+    buttonsNext
 
     .extitbtn{
         color: white;
@@ -187,7 +198,7 @@
     }
 /*styling the first question*/
     .quiz1
-    .quiz2 {
+     {
         position: absolute;
         left:50%;
         top:50%;
@@ -209,7 +220,7 @@
         padding:0 30px;
         background-color: whitesmoke;
         border-radius: 5px 5px 0 0;
-        box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.2);
+        box-shadow: 0px 3px 5px 1pxbuttonsNext rgba(0,0,0,0.2);
         display: flex;
         align-items: center;
 
@@ -276,7 +287,7 @@
         padding: 0 5px;
     }
 
-     .nextquestion .buttons{
+     .nextquestion .buttonsNext{
         height: 30px;
         width: 60px;
         padding: 5px;
@@ -338,4 +349,36 @@
     background-color: brown;
     padding: 5px;
     
+}
+
+
+/*styling question2*/
+.quiz2{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%); 
+        background-color: whitesmoke;
+        width:600px;
+        height: 200px;
+        opacity: 0;
+        pointer-events: none;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%,-50%) scale(0.9);
+}
+
+.quiz3{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%); 
+    background-color: whitesmoke;
+    width:600px;
+    height: 200px;
+    opacity: 0;
+    pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0.9);
 }
