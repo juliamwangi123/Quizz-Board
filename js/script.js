@@ -8,6 +8,13 @@ const nextQue1Btn = document.querySelector(".buttonsNext1")//next button on ques
 const secondQue =document.querySelector(".quiz2");// question 2
 const btnQue2 =document.querySelector(".buttonsNext2");
 const thirdQue =document.querySelector(".quiz3");
+const btnQue3 =document.querySelector(".buttonsNext3");
+const fourthQue =document.querySelector(".quiz4");
+const btnQue4 =document.querySelector(".buttonsNext4");
+const fifthQue =document.querySelector(".quiz5");
+const scorePage = document.querySelector(".scores");
+const btnQue5=document.querySelector(".buttonsNext5");
+
 
 
 
@@ -37,6 +44,8 @@ continueBtn.addEventListener("click", (e)=>{
     firstQue.classList.add("show2");
    
 
+   
+
 })
 
 //next button on question 1 takes you to questin 2
@@ -47,12 +56,44 @@ nextQue1Btn.addEventListener("click", (e)=>{
    
     secondQue.classList.add("active");
    
+   
 
 })
 btnQue2.addEventListener("click", (e)=>{
     e.preventDefault();
    
     thirdQue.classList.add("pop");
+   
+
+
+} )
+
+btnQue3.addEventListener("click", (e)=>{
+    e.preventDefault();
+   
+    fourthQue.classList.add("active2");
+  
+
+
+
+
+} )
+
+btnQue4.addEventListener("click", (e)=>{
+    e.preventDefault();
+   
+    fifthQue.classList.add("show2");
+    
+
+
+} )
+
+
+btnQue5.addEventListener("click", (e)=>{
+    e.preventDefault();
+   
+   
+    scorePage.classList.add("scoreShow");
 
 
 
@@ -61,13 +102,15 @@ btnQue2.addEventListener("click", (e)=>{
 
 
 
-/*
+
+
+
 let score = 0;// initialize score to zero
 
 
 
 const quiz = document.getElementById("form1");
-const result = document.getElementById("result");//displays results
+
 
 let startQuiz = quiz.addEventListener("submit" , (e) =>{  
   
@@ -94,14 +137,12 @@ total();
 
 
 function total(){
-
+    const result = document.getElementById("result");//displays results
     if (score< 2){
-        result.textContent="Your score  is:  " + score  +" " + "try bit harder nexttime";
-    }else{
-        result.textContent=  "Your score is:  " + score + " "+ "congratulation";
-    } ;
+        result.innerHTML ="hey you";
+    }
+        
 
   
 };
 
-*/
