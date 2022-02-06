@@ -41,7 +41,9 @@ the  quiz as many times as they wish</p>
 ## Reference
 * Materialize CSS
 * MDN Documentation
-
+* 
+## Known Bugs
+ Currently not aware of any
 ## Licence
 licence under the [MIT license](LICENSE)
 
