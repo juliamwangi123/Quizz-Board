@@ -572,3 +572,9 @@
     pointer-events: none;
     transform: translate(-50%,-50%) scale(0.9);
 }
+
+.resultShow{
+    font-size: 62px;
+    color: black;
+    text-align: center;
+}

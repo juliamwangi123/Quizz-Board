@@ -130,56 +130,34 @@ btnQue5.addEventListener("click", (e)=>{
 function checkAnswers(usersInfo){
 
 
-    let q1 = usersInfo.get("question1");
-    let q2 = usersInfo.get("question2");
-    let q3 = usersInfo.get("question3");
-    let q4 = usersInfo.get("question4");
-    let q5 = usersInfo.get("question5");
+    let failedQue = {};
 
     for(let i of usersInfo){
-        let question= i[0]
-        let answer = i[1]
-
-        console.log(i);
-        if(answer === correctAnswers[question] ){
-                score++
+       
+        if(i[1] === correctAnswers[i[0]] ){
+                score += 20;
                
         
+            }else{
+            
+             //   failedQue[i[0]] = correctAnswers[i[0]];
             }
 
     }
-
-
-    // if(q1 === correctAnswers["question1"] ){
-    //     score++
-       
-
-    // }
-    // if(q2 === correctAnswers["question2"] ){
-    //     score++
-              
-    // }
-
-    // if(q2 === correctAnswers["question3"] ){
-    //     score++
-              
-    // }
-
-
-    // if(q1 === correctAnswers["question4"] ){
-    //     score++
-              
-    // }
-
-
-    // if(q1 === correctAnswers["question5"] ){
-    //     score++
     
-              
-    // }
 
+   
+  //  document.getElementById('failed').innerHTML = failedQue;
 
-    return results.innerHTML = score;
+    if (score < 80){
+        return results.innerHTML = 'your score:  ' + score  + ' Failed'
+
+    }else{
+        return results.innerHTML = 'your score: ' + score  + ' Congratulation'
+
+    }
+
+    
 
 }
 
