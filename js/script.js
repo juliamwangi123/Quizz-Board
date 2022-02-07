@@ -151,6 +151,7 @@ function checkAnswers(usersInfo){
 
     if (score < 80){
         return results.innerHTML = 'your score:  ' + score  + ' Failed'
+           scorePage.style.color = "red"
 
     }else{
         return results.innerHTML = 'your score: ' + score  + ' Congratulation'
