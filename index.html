@@ -56,10 +56,10 @@
  <div class="choicesList">
         <div class="choices">
 
-    <p><input type="radio"name="question1"    value=" scripitng"> A.scripting  tag</p>
+    <p><input type="radio"  name="question1"    value="scripitng"> A.scripting  tag</p>
     <p><input type="radio"  name="question1"    value="js">B. js tag</p>
-    <p><input type="radio"  name="question1"    value="script">C. script tag</p> 
-    <p><input type="radio"  name="question1"    value=" javascript"> D.javascript tag </p> 
+    <p><input type="radio"  name="question1"    value="script" checked>C. script tag</p> 
+    <p><input type="radio"  name="question1"    value="javascript"> D.javascript tag </p> 
         </div>
         <!--footer on a question container-->
         <div class="footer">
@@ -83,7 +83,7 @@
 
     <div class="choicesList">
         <div class="choices">    
-    <p><input type="radio"name="question2"     value="scriptitng language"> A.Scripting language </p>
+    <p><input type="radio"name="question2"     value="scripting language"> A.Scripting language </p>
     <p><input type="radio"  name= "question2"  value="Markup language">B. Markup language</p>
     <p><input type="radio"  name="question2 "  value="database language">C. Database</p> 
     <p><input type="radio"  name="question2 "  value="styling language"> Dcascading styling language </p> 
@@ -171,7 +171,7 @@
                 <span><p>5</p>of<p>5</p>Questions </span>
             </div>
             <div class="nextquestion">
-                <button class="buttonsNext5">NEXT</button>
+                <button type= "submit" class="buttonsNext5">NEXT</button>
             </div>
         </div>
         
@@ -181,10 +181,11 @@
 
 </form> 
 
-<div class="scores">
-    <div class="showResults">
-        <p id="result"></p>
 
+<div class="scores">
+    <p id="result">score is</p>
+    <div class="showResults">
+       
     </div>
     <div class="restart_btn">
     <a href="/index.html" id="redo">RETAKE QUIZ</a>

@@ -16,7 +16,19 @@ const scorePage = document.querySelector(".scores");
 const btnQue5=document.querySelector(".buttonsNext5");
 
 
-var results = document.querySelector(".results");
+// correct answers
+let correctAnswers = {
+    question1: "script",
+    question2: "scriptitng language",
+    question2: "1995",
+    question4: "stands for Structured Query Language",
+    question5: "CSS"
+
+ }
+
+let userForm = document.getElementById("form1"); // getting the form 
+var score = 0;// initialize score to 
+let results = document.querySelector("#result");
 
 //oclcik on start button
 
@@ -32,9 +44,9 @@ exitButton.addEventListener("click", (e)=>{
 
     e.preventDefault();
     instructions.classList.remove("show");
+    let results = document.querySelector("#result");
 
 });
-
 
 
 //if continue button is clicked takes one to the quiz
@@ -86,44 +98,37 @@ btnQue3.addEventListener("click", (e)=>{
 btnQue4.addEventListener("click", (e)=>{
     e.preventDefault();
    
-    fifthQue.classList.add("show2");
+    fifthQue.classList.add("show2");let results = document.querySelector("#result");
+
 
 
 } )
+
+
+
 btnQue5.addEventListener("click", (e)=>{
         e.preventDefault();
         scorePage.classList.add("scoreShow");
 
+        var usersInfo = new FormData(userForm); //creating a new object and with the users data
 
 
- comparingData();
- results.textContent = "your score is" + score;
-});
 
-//corect answers
-
-let correctAnswers = {
-    question1: "script",
-    question2: "scriptitng language",
-    question2: "1995",
-    question4: "stands for Structured Query Language",
-    question5: "CSS"
-
- }
-
-let quiz = document.querySelector(".quiz"); // 
-var score = 0;// initialize score to 
+        
 
 
 
 
-//comparing datadocument.querySelector(".buttonsNext5");
+        
+
+      
+ checkAnswers(usersInfo);
+})
 
 
 
-function comparingData(usersInfo){
+function checkAnswers(usersInfo){
 
-    var usersInfo = new FormData(quiz); //creating a new object and with the users data
 
     let q1 = usersInfo.get("question1");
     let q2 = usersInfo.get("question2");
@@ -131,34 +136,61 @@ function comparingData(usersInfo){
     let q4 = usersInfo.get("question4");
     let q5 = usersInfo.get("question5");
 
+    for(let i of usersInfo){
+        let question= i[0]
+        let answer = i[1]
 
-    if(q1 === correctAnswers["question1"] ){
-        score++
-              
-    }
-    if(q2 === correctAnswers["question2"] ){
-        score++
-              
-    }
+        console.log(i);
+        if(answer === correctAnswers[question] ){
+                score++
+               
+        
+            }
 
-    if(q2 === correctAnswers["question3"] ){
-        score++
-              
     }
 
 
-    if(q1 === correctAnswers["question4"] ){
-        score++
+    // if(q1 === correctAnswers["question1"] ){
+    //     score++
+       
+
+    // }
+    // if(q2 === correctAnswers["question2"] ){
+    //     score++
               
-    }
+    // }
+
+    // if(q2 === correctAnswers["question3"] ){
+    //     score++
+              
+    // }
 
 
-    if(q1 === correctAnswers["question5"] ){
-        score++
+    // if(q1 === correctAnswers["question4"] ){
+    //     score++
               
-    }
+    // }
+
+
+    // if(q1 === correctAnswers["question5"] ){
+    //     score++
+    
+              
+    // }
+
+
+    return results.innerHTML = score;
 
 }
+
+
+
+
+
+
+
+
+  
 
 
  
