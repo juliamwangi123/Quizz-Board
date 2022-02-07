@@ -16,22 +16,9 @@ const scorePage = document.querySelector(".scores");
 const btnQue5=document.querySelector(".buttonsNext5");
 
 
-let score = 0;// initialize score to 
+var results = document.querySelector(".results");
 
-
-//the correct answers
-
- let correctAnswers = {
-    question1: "script",
-    question2: "scriptitng language",
-    question2: "1995",
-    question4: "stands for Structured Query Language",
-    question5: "CSS"
-
- }
- 
-
-// when the start buttonlet score = 0;// initialize score to 0 is clicked move to the instruction page
+//oclcik on start button
 
 startBtn.addEventListener("click", (event)=>{
     event.preventDefault();
@@ -109,28 +96,80 @@ btnQue5.addEventListener("click", (e)=>{
 
 
 
-
-total();
+ comparingData();
+ results.textContent = "your score is" + score;
 });
-//function carrying correct answers
- 
- 
+
+//corect answers
+
+let correctAnswers = {
+    question1: "script",
+    question2: "scriptitng language",
+    question2: "1995",
+    question4: "stands for Structured Query Language",
+    question5: "CSS"
+
+ }
+
+let quiz = document.querySelector(".quiz"); // 
+var score = 0;// initialize score to 
 
 
 
 
+//comparing datadocument.querySelector(".buttonsNext5");
 
 
 
+function comparingData(usersInfo){
 
-function total(){
-    if (score<=2){
-       
-        result.innerText = "your score is" + score;
-       console.log(result);
+    var usersInfo = new FormData(quiz); //creating a new object and with the users data
+
+    let q1 = usersInfo.get("question1");
+    let q2 = usersInfo.get("question2");
+    let q3 = usersInfo.get("question3");
+    let q4 = usersInfo.get("question4");
+    let q5 = usersInfo.get("question5");
+
+
+    if(q1 === correctAnswers["question1"] ){
+        score++
+              
     }
-        
+    if(q2 === correctAnswers["question2"] ){
+        score++
+              
+    }
 
-  
-};
+    if(q2 === correctAnswers["question3"] ){
+        score++
+              
+    }
+
+
+    if(q1 === correctAnswers["question4"] ){
+        score++
+              
+    }
+
+
+    if(q1 === correctAnswers["question5"] ){
+        score++
+              
+    }
+
+}
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
 
